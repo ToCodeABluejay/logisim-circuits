@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="nand_xor"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,18 +51,26 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="nand_xor">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="nand_xor"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(60,180)" name="Power"/>
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(460,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="1" loc="(180,200)" name="NAND Gate"/>
     <comp lib="1" loc="(300,140)" name="NAND Gate"/>
     <comp lib="1" loc="(300,260)" name="NAND Gate"/>
     <comp lib="1" loc="(450,200)" name="NAND Gate"/>
-    <comp lib="5" loc="(460,200)" name="LED"/>
-    <comp lib="5" loc="(60,220)" name="Button"/>
     <wire from="(120,120)" to="(120,180)"/>
     <wire from="(120,120)" to="(240,120)"/>
     <wire from="(120,220)" to="(120,280)"/>
@@ -75,7 +83,5 @@
     <wire from="(390,140)" to="(390,180)"/>
     <wire from="(390,220)" to="(390,260)"/>
     <wire from="(450,200)" to="(460,200)"/>
-    <wire from="(60,180)" to="(120,180)"/>
-    <wire from="(60,220)" to="(120,220)"/>
   </circuit>
 </project>
